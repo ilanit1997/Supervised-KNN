@@ -22,8 +22,6 @@ class KnnClassifier:
         self.training = None
         self.train_labels = None
 
-        # TODO - Place your student IDs here. Single submitters please use a tuple like so: self.ids = (123456789,)
-        self.ids = (319000055, 318368107)
 
     def fit(self, X: np.ndarray, y: np.ndarray) -> None:
         """
@@ -104,7 +102,6 @@ def main():
 
     print("Initiating KnnClassifier")
     model = KnnClassifier(k=args.k, p=args.p)
-    print(f"Student IDs: {model.ids}")
     print(f"Loading data from {args.csv}...")
     data = pd.read_csv(args.csv, header=None)
     print(f"Loaded {data.shape[0]} rows and {data.shape[1]} columns")
